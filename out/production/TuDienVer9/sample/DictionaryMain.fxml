@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<SplitPane dividerPositions="0.5719063545150501" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: #009688;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <AnchorPane maxWidth="400.0" style="-fx-background-color: lightblue; -fx-border-style: ;">
+        <Text layoutX="75.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tìm kiếm" textAlignment="CENTER" AnchorPane.leftAnchor="120.0">
+            <font>
+                <Font name="Segoe UI Italic" size="30.0" />
+            </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.5492063249860492">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.39306163787841797" green="0.09617988020181656" blue="0.6359649300575256" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8059027791023254" green="0.6940789222717285" blue="0.9254385828971863" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+        </Text>
+        <Button layoutX="259.0" layoutY="86.0" mnemonicParsing="false" onAction="#searchTheWord" style="-fx-background-color: white;" text="Search" textAlignment="CENTER" textOverrun="CLIP" wrapText="true" AnchorPane.leftAnchor="265.0" AnchorPane.topAnchor="137.0">
+            <font>
+                <Font name="Arial Black" size="18.0" />
+            </font>
+         <textFill>
+            <LinearGradient endX="1.0" startY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.5164608955383301" green="0.3827160596847534" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.3100000023841858" green="1.0" blue="0.985072135925293" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <effect>
+            <Glow />
+         </effect>
+        </Button>
+        <TextField fx:id="searchBar" layoutX="5.0" layoutY="134.0" onAction="#searchTheWord" promptText="Nhập từ cần tìm tại đây" style="-fx-background-color: white;" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="137.0">
+            <font>
+                <Font name="Segoe UI" size="20.0" />
+            </font>
+        </TextField>
+        <ButtonBar layoutX="30.0" layoutY="489.0" prefHeight="40.0" prefWidth="200.0" />
+        <TextArea fx:id="suggestArea" editable="false" layoutX="7.0" layoutY="184.0" prefHeight="75.0" prefWidth="249.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="184.0">
+            <font>
+                <Font name="Segoe UI" size="20.0" />
+            </font>
+        </TextArea>
+    </AnchorPane>
+    <AnchorPane prefHeight="798.0" prefWidth="401.0" style="-fx-background-color: lightblue;">
+        <TextArea fx:id="textArea" editable="false" layoutX="8.0" layoutY="137.0" prefHeight="629.0" prefWidth="374.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="137.0">
+            <font>
+                <Font name="Segoe UI" size="20.0" />
+            </font>
+        </TextArea>
+        <Text layoutX="75.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Định nghĩa" textAlignment="CENTER" AnchorPane.leftAnchor="120.0">
+            <font>
+                <Font name="Segoe UI Italic" size="30.0" />
+            </font>
+         <fill>
+            <LinearGradient endX="0.7269840785435269" endY="1.0" startX="0.6952381179446265">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color green="0.18194444477558136" blue="0.5745614171028137" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.7071394324302673" green="0.6899999976158142" blue="0.9200000166893005" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+        </Text>
+        <MenuButton layoutX="316.0" layoutY="31.0" mnemonicParsing="false" style="-fx-background-color: white;" text="..." AnchorPane.rightAnchor="14.0">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#deleteButtonClicked" text="Xóa" />
+                <MenuItem mnemonicParsing="false" onAction="#editButtonClicked" text="Sửa" />
+                <MenuItem mnemonicParsing="false" onAction="#addButtonClicked" text="Thêm" />
+            </items>
+            <font>
+                <Font name="Segoe UI" size="18.0" />
+            </font>
+         <effect>
+            <Glow />
+         </effect>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.39306163787841797" green="0.09617988020181656" blue="0.6359649300575256" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+        </MenuButton>
+        <Button layoutX="8.0" layoutY="90.0" mnemonicParsing="false" onAction="#audioButtonClicked" style="-fx-background-color: white;" text="Phát âm">
+            <font>
+                <Font name="Segoe UI" size="18.0" />
+            </font>
+         <graphic>
+             <ImageView fitHeight="26.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                 <Image url="@speaker.jpg" />
+             </ImageView>
+         </graphic>
+         <textFill>
+            <LinearGradient endX="0.4507936023530506" endY="1.0" startX="0.5142856779552641" startY="0.419047619047619">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color green="0.078125" blue="0.5" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.3055555522441864" green="0.8726851940155029" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+        </Button>
+    </AnchorPane>
+</SplitPane>
